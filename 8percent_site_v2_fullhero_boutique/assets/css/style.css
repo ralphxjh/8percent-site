@@ -1,0 +1,285 @@
+:root{
+  --bg:#ffffff;
+  --text:#0b1020;
+  --muted:#475569;
+  --line:rgba(15,23,42,0.10);
+  --accent:#0f2a5a;
+  --accent2:#0ea5a4;
+  --maxw:1100px;
+  --radius:18px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.55;
+}
+
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.85}
+.container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+header{
+  position:sticky; top:0; z-index:20;
+  background:rgba(255,255,255,.86);
+  backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 0;
+}
+.brand{
+  display:flex; align-items:center; gap:12px;
+  font-weight:700; letter-spacing:.3px;
+}
+.brand img{width:34px;height:34px;border-radius:10px}
+.menu{display:flex; align-items:center; gap:18px; flex-wrap:wrap}
+.menu a{
+  font-size:14px; color:rgba(11,16,32,.88);
+  padding:8px 10px; border-radius:12px;
+}
+.menu a.active{background:rgba(2,6,23,.06)}
+.lang{
+  display:flex; align-items:center; gap:8px;
+  border:1px solid var(--line); border-radius:999px;
+  padding:6px 8px;
+}
+.lang button{
+  border:0; background:transparent; cursor:pointer;
+  font-size:13px; padding:6px 10px; border-radius:999px;
+  color:rgba(11,16,32,.78);
+}
+.lang button.active{background:rgba(2,6,23,.06); color:rgba(11,16,32,1)}
+
+main{padding:56px 0 70px}
+.hero{
+  display:grid; grid-template-columns:1.2fr .8fr;
+  gap:34px; align-items:center;
+}
+.hero .logoLock{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:26px;
+  background:linear-gradient(180deg, rgba(2,6,23,.02), rgba(2,6,23,0));
+}
+.hero .logoLock img{width:100%; max-width:380px; display:block; margin:0 auto}
+h1{font-size:44px; line-height:1.1; margin:0 0 14px}
+h2{font-size:28px; margin:0 0 12px}
+p{margin:0 0 14px; color:rgba(11,16,32,.86)}
+.muted{color:var(--muted)}
+.actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:12px 16px; border-radius:14px;
+  border:1px solid var(--line);
+  font-size:14px;
+}
+.btn.primary{
+  background:var(--accent); color:#fff; border-color:transparent;
+}
+.btn.primary:hover{opacity:.92}
+.btn.ghost{background:#fff}
+
+.section{margin-top:54px}
+.cards{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+.card{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:#fff;
+}
+.card .media{
+  height:240px;
+  background:linear-gradient(135deg, rgba(15,42,90,.10), rgba(14,165,164,.12));
+  display:flex; align-items:center; justify-content:center;
+  color:rgba(11,16,32,.45);
+  font-size:14px;
+}
+.card .body{padding:18px}
+.kicker{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:rgba(11,16,32,.62)}
+.titleRow{display:flex; align-items:baseline; justify-content:space-between; gap:12px}
+.card h3{margin:8px 0 6px; font-size:18px}
+.spec{font-size:13px; color:rgba(11,16,32,.72)}
+hr.sep{border:0; border-top:1px solid var(--line); margin:18px 0}
+
+.split{
+  display:grid; grid-template-columns:1fr 1fr; gap:22px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+  background:linear-gradient(180deg, rgba(2,6,23,.015), rgba(2,6,23,0));
+}
+
+.pageTitle{margin-bottom:18px}
+.pageTitle h1{font-size:38px}
+.pageTitle p{max-width:780px}
+
+.hotelHero{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.hotelHero .media{
+  height:360px;
+  background:linear-gradient(135deg, rgba(15,42,90,.10), rgba(14,165,164,.12));
+  display:flex; align-items:center; justify-content:center;
+  color:rgba(11,16,32,.45);
+}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:18px}
+.list{
+  margin:10px 0 0; padding-left:18px; color:rgba(11,16,32,.86)
+}
+.list li{margin:6px 0}
+.ctaBar{
+  margin-top:18px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  border-top:1px solid var(--line);
+  padding-top:16px;
+}
+footer{
+  border-top:1px solid var(--line);
+  padding:22px 0;
+  color:rgba(11,16,32,.66);
+  font-size:13px;
+}
+.footerRow{
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+.smallNav{display:flex; gap:14px; flex-wrap:wrap}
+.smallNav a{color:rgba(11,16,32,.66)}
+
+@media (max-width: 920px){
+  .hero{grid-template-columns:1fr; }
+  h1{font-size:38px}
+  .cards{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
+  .hotelHero .media{height:280px}
+}
+
+/* Image blocks */
+.media img, .hotelHero .media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Gallery */
+.gallery{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.gallery a{
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  display:block;
+  background:#fff;
+}
+.gallery img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  display:block;
+}
+@media (max-width: 920px){
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .gallery img{height:150px}
+}
+
+/* Full-bleed hero */
+.heroFull{
+  position:relative;
+  min-height:calc(100vh - 68px);
+  display:flex;
+  align-items:flex-end;
+  padding:64px 0 54px;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.00) 0%, rgba(0,0,0,.45) 70%, rgba(0,0,0,.58) 100%),
+    var(--hero-url);
+  background-size:cover;
+  background-position:center;
+}
+.heroFull .inner{
+  width:100%;
+}
+.heroFull h1{
+  color:#fff;
+  font-size:56px;
+  margin:0 0 10px;
+  letter-spacing:.2px;
+}
+.heroFull p{
+  color:rgba(255,255,255,.86);
+  margin:0 0 18px;
+  max-width:720px;
+}
+.heroFull .actions .btn{
+  border-color:rgba(255,255,255,.22);
+}
+.heroFull .btn.ghost{
+  background:rgba(255,255,255,.08);
+  color:#fff;
+}
+.heroFull .btn.ghost:hover{background:rgba(255,255,255,.12)}
+.heroFull .btn.primary{
+  background:#fff;
+  color:var(--text);
+}
+.heroFull .btn.primary:hover{opacity:.95}
+
+@media (max-width: 920px){
+  .heroFull{padding:52px 0 42px}
+  .heroFull h1{font-size:44px}
+}
+
+/* Boutique hotel page hero */
+.hotelHeroFull{
+  position:relative;
+  min-height:64vh;
+  display:flex;
+  align-items:flex-end;
+  padding:54px 0 40px;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.50) 80%, rgba(0,0,0,.62) 100%),
+    var(--hero-url);
+  background-size:cover;
+  background-position:center;
+}
+.hotelHeroFull .kicker{
+  color:rgba(255,255,255,.75);
+}
+.hotelHeroFull h1{
+  color:#fff;
+  margin:10px 0 10px;
+}
+.hotelHeroFull .muted{
+  color:rgba(255,255,255,.82);
+}
+.hotelPage main{padding:0 0 70px}
+.sectionPad{padding-top:34px}
+.softCard{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+  background:linear-gradient(180deg, rgba(2,6,23,.015), rgba(2,6,23,0));
+}
+.fineTitle{
+  font-size:22px;
+  margin:0 0 10px;
+}
+.twoCol{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:18px;
+}
+@media (max-width: 920px){
+  .hotelHeroFull{min-height:56vh}
+  .twoCol{grid-template-columns:1fr}
+}
